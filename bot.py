@@ -183,4 +183,5 @@ if __name__ == '__main__':
     app.add_handler(MessageHandler(filters.SUCCESSFUL_PAYMENT, successful_payment))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, ai_handler))
     logging.info("Bot started...")
-    app.run_polling()
+    # ===== ЕДИНСТВЕННОЕ ИСПРАВЛЕНИЕ =====
+    app.run_polling(allowed_updates=Update.ALL_TYPES)
