@@ -1,2 +1,4 @@
 python-telegram-bot==21.7
 groq
+aiocryptopay
+Flask
